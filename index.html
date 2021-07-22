@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded arjs>
+      <!-- <a-marker preset="test">
+        <a-scene rotation="-90 0 0 0">
+          <a-image src="Valdete-Daku-1.jpg"></a-image>
+        </a-scene>
+      </a-marker> -->
+
+      <a-marker type="pattern" url="pattern.patt">
+        <a-scene rotation="-90 0 0 0">
+            <a-image src="Valdete-Daku-1.jpg"></a-image>
+          </a-scene>
+      </a-marker>
+      <a-marker type="pattern" url="pattern2.patt">
+        <a-scene rotation="-90 0 0 0">
+            <a-image src="fb.jpg"></a-image>
+          </a-scene>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  </body>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBUDsxhV2elmzk6FXzYdn_c97nwx5o-BKQ",
+      authDomain: "videotracker-38fa5.firebaseapp.com",
+      projectId: "videotracker-38fa5",
+      storageBucket: "videotracker-38fa5.appspot.com",
+      messagingSenderId: "854260780019",
+      appId: "1:854260780019:web:e2c06c587a36f902d72086"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</html>
